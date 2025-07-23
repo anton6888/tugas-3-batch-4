@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Biodata Modern (Bootstrap)</title>
+    <!-- Meta description untuk SEO -->
+    <meta name="description" content="Profil Anton, seorang Web Developer berpengalaman yang berfokus pada solusi digital inovatif dan responsif.">
+    <!-- Memuat font Inter dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Memuat Bootstrap CSS dari CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Menghubungkan file CSS kustom (untuk override atau gaya tambahan) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-4 p-0 rounded shadow-lg">
+        <!-- Bagian Menu (Navbar Bootstrap) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-top">
+            <div class="container-fluid">
+                <a class="navbar-brand d-lg-none" href="#">Profil Saya</a> <!-- Brand hanya di mobile -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portofolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Bagian Pendahuluan -->
+        <section id="about" class="p-4 p-md-5 bg-white border-bottom">
+            <div class="row align-items-center g-4">
+                <div class="col-md-8 text-center text-md-start">
+                    <h1 class="display-5 fw-bold text-primary mb-3">Selamat Datang di Profil Saya</h1>
+                    <p class="lead text-secondary mb-4">
+                        Saya adalah seorang web developer yang bersemangat dalam membangun solusi digital.
+                        Dengan pengalaman dalam pengembangan front-end dan back-end, saya berdedikasi untuk menciptakan
+                        aplikasi web yang efisien, skalabel, dan mudah digunakan.
+                    </p>
+                    <!-- Tombol untuk memicu modal -->
+                    <button type="button" class="btn btn-primary btn-lg rounded-pill shadow" data-bs-toggle="modal" data-bs-target="#detailModal">
+                        Lihat Selengkapnya
+                    </button>
+                </div>
+                <div class="col-md-4 text-center">
+                    <!-- Gambar placeholder dengan latar belakang warna kulit/beige -->
+                    <img src="https://placehold.co/250x250/F0E6D2/333333?text=Foto+Profil" class="img-fluid rounded-circle border border-primary border-5 shadow-lg" alt="Foto Profil">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Biodata -->
+        <section class="p-4 p-md-5 bg-light border-bottom">
+            <h2 class="text-center text-primary mb-5 position-relative">
+                Biodata
+                <span class="underline-accent"></span>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Nama Lengkap</h5>
+                        <p class="mb-0">Anton</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Pendidikan</h5>
+                        <p class="mb-0">D1</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Pekerjaan</h5>
+                        <p class="mb-0">Web Developer</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Kontak</h5>
+                        <p class="mb-0">antonz060606@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Hobi</h5>
+                        <p class="mb-0">Traveling dan Otomotif</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm text-center h-100">
+                        <h5 class="text-primary fw-bold">Alamat</h5>
+                        <p class="mb-0">Jl. royal residence B2-44 (cluster kensington), Surabaya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Portofolio -->
+        <section id="portfolio" class="p-4 p-md-5 bg-white border-bottom">
+            <h2 class="text-center text-primary mb-5 position-relative">
+                Portofolio
+                <span class="underline-accent"></span>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x250/4A90E2/FFFFFF?text=Project+1" class="card-img-top" alt="Project 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary">Website Toko Online</h5>
+                            <p class="card-text text-secondary">Sebuah website e-commerce untuk penjualan produk fashion dengan fitur lengkap.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x250/6C757D/FFFFFF?text=Project+2" class="card-img-top" alt="Project 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary">Aplikasi Manajemen Inventaris</h5>
+                            <p class="card-text text-secondary">Aplikasi berbasis web untuk memonitor dan mengelola keluar-masuk barang gudang secara efisien.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://placehold.co/400x250/FFC107/FFFFFF?text=Project+3" class="card-img-top" alt="Project 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-primary">Company Profile Website</h5>
+                            <p class="card-text text-secondary">Desain dan pengembangan website profil perusahaan jasa digital marketing yang modern dan menarik.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm rounded-pill">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Kontak -->
+        <section id="contact" class="p-4 p-md-5 bg-light rounded-bottom">
+            <h2 class="text-center text-primary mb-5 position-relative">
+                Kontak
+                <span class="underline-accent"></span>
+            </h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <div class="mb-3">
+                            <h5 class="text-primary fw-bold">Email</h5>
+                            <p class="mb-0 text-secondary">antonz060606@gmail.com</p>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="text-primary fw-bold">Telepon</h5>
+                            <p class="mb-0 text-secondary">+62 8XX XXXX XXXX</p> <!-- Nomor telepon diperbarui -->
+                        </div>
+                        <div>
+                            <h5 class="text-primary fw-bold">Alamat</h5>
+                            <p class="mb-0 text-secondary">Jl. royal residence B2-44 (cluster kensington), Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <form>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label visually-hidden">Nama</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Nama">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputEmail" class="form-label visually-hidden">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMessage" class="form-label visually-hidden">Pesan</label>
+                                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Pesan"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary rounded-pill shadow">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="detailModalLabel">Detail Profil</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Halo! Saya adalah seorang web developer yang bersemangat dengan pengalaman luas dalam membangun
+                        aplikasi web yang inovatif dan efisien. Saya memiliki keahlian dalam pengembangan
+                        **front-end** (HTML, CSS, JavaScript, React) dan **back-end** (Node.js, Python, database).
+                    </p>
+                    <p>
+                        Saya selalu antusias untuk mempelajari teknologi baru dan menerapkan praktik terbaik untuk
+                        menciptakan solusi yang skalabel, aman, dan mudah digunakan. Tujuan saya adalah membantu
+                        bisnis dan individu mewujudkan ide-ide digital mereka menjadi produk yang berfungsi dengan baik
+                        dan memberikan nilai nyata.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="#contact" class="btn btn-primary" data-bs-dismiss="modal">Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memuat Bootstrap JS dari CDN (Bundle dengan Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
