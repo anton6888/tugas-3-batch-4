@@ -1,0 +1,408 @@
+/* Variabel CSS untuk warna */
+:root {
+    --primary-color: #4A90E2; /* Biru cerah */
+    --secondary-color: #343A40; /* Abu-abu gelap, untuk background nav */
+    --accent-color: #FFC107; /* Kuning cerah */
+    --background-light: #F8F9FA; /* Abu-abu sangat terang untuk body */
+    --background-section: #FFFFFF; /* Putih untuk bagian intro, biodata, dan kontak */
+    --background-medium: #E9ECEF; /* Abu-abu terang untuk item biodata */
+    --text-dark: #343A40; /* Teks gelap */
+    --text-light: #FFFFFF; /* Teks terang */
+    --border-color: #DEE2E6; /* Warna border */
+    --image-bg-color: #F0E6D2; /* Warna latar belakang gambar profil sesuai foto */
+}
+
+/* Reset dasar dan font */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light); /* Latar belakang utama */
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    background-color: var(--text-light); /* Kontainer utama berwarna putih */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Memastikan rounded corners terlihat */
+}
+
+/* Navigasi */
+nav {
+    background-color: var(--secondary-color); /* Background nav lebih gelap sesuai foto */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: row; /* Navigasi horizontal secara default untuk semua ukuran layar */
+    justify-content: flex-end; /* Rata kanan sesuai foto */
+    align-items: center;
+    gap: 20px; /* Jarak antar item navigasi */
+    border-top-left-radius: 15px; /* Tambahkan border-radius atas di nav */
+    border-top-right-radius: 15px;
+}
+
+nav a {
+    color: var(--text-light); /* Teks navigasi putih sesuai foto */
+    text-decoration: none;
+    padding: 8px 15px; /* Padding yang sedikit lebih besar */
+    font-weight: 600;
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Mencegah teks menu pecah baris */
+    display: inline-block; /* Memastikan padding dan margin bekerja dengan baik */
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Bagian Pendahuluan (Section 2) */
+.intro-section {
+    display: grid;
+    grid-template-columns: 1fr; /* Default untuk mobile */
+    gap: 30px;
+    padding: 40px;
+    align-items: center;
+    background-color: var(--background-section); /* Latar belakang putih sesuai foto */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.intro-content h1 { /* Aturan baru untuk h1 di intro-content */
+    font-size: 2.2em; /* Ukuran font disesuaikan agar mirip foto */
+    color: var(--primary-color); /* Warna biru sesuai foto */
+    margin-top: 0;
+    margin-bottom: 15px; /* Jarak bawah dari paragraf */
+    font-weight: 700; /* Tebal */
+}
+
+.intro-content h2 { /* Aturan h2 ini tidak lagi digunakan jika h2 dihapus dari HTML */
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.intro-content p {
+    font-size: 1.1em;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.intro-content button {
+    background-color: var(--primary-color); /* Tombol biru sesuai foto */
+    color: var(--text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-content button:hover {
+    background-color: #3A7AD0; /* Sedikit lebih gelap */
+    transform: translateY(-2px);
+}
+
+.intro-image {
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Bagian Biodata (Section 3) */
+.biodata-section {
+    padding: 40px;
+    background-color: var(--background-section); /* Latar belakang putih sesuai foto */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.biodata-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.biodata-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.biodata-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default untuk mobile */
+    gap: 20px;
+}
+
+.biodata-item {
+    background-color: var(--background-medium); /* Latar belakang item biodata abu-abu terang */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.biodata-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.biodata-item b {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Bagian Portofolio (Section 4) */
+.portfolio-section {
+    padding: 40px;
+    background-color: var(--background-light); /* Latar belakang bagian ini */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.portfolio-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default untuk mobile */
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: var(--text-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.portfolio-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-content h3 {
+    font-size: 1.4em;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.portfolio-content p {
+    font-size: 0.95em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.portfolio-content a {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-content a:hover {
+    background-color: #FFD700; /* Sedikit lebih gelap */
+}
+
+/* Bagian Kontak */
+.contact-section {
+    padding: 40px;
+    background-color: var(--background-section); /* Latar belakang putih */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contact-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default untuk mobile: satu kolom */
+    gap: 30px;
+}
+
+.contact-info {
+    background-color: var(--background-medium); /* Latar belakang abu-abu terang */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info .info-item {
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.contact-info .info-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-info .info-item b {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form {
+    background-color: var(--background-medium); /* Latar belakang abu-abu terang */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box; /* Penting untuk lebar penuh */
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical; /* Memungkinkan pengguna mengubah ukuran tinggi */
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-self: flex-start; /* Agar tombol tidak mengambil lebar penuh */
+}
+
+.contact-form button:hover {
+    background-color: #3A7AD0;
+    transform: translateY(-2px);
+}
+
+
+/* Media Queries untuk Responsif */
+
+/* Tablet (lebar minimal 768px) */
+@media (min-width: 768px) {
+    .intro-section {
+        grid-template-columns: 2fr 1fr; /* Konten di kiri, gambar di kanan */
+    }
+
+    .intro-image {
+        text-align: right; /* Gambar rata kanan di tablet/desktop */
+    }
+
+    .biodata-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr; /* 2 kolom untuk tablet */
+    }
+}
+
+/* Desktop (lebar minimal 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        margin: 40px;
+    }
+
+    .intro-section {
+        grid-template-columns: 3fr 1fr; /* Konten lebih lebar */
+    }
+
+    .biodata-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk desktop */
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk desktop */
+    }
+}
